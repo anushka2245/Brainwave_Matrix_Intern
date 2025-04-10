@@ -1,0 +1,76 @@
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-side {
+  background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  flex: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 50, 0.5);
+  z-index: 1;
+}
+
+.animated-text {
+  z-index: 2;
+  font-size: 2rem;
+  text-align: center;
+  animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0.3; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.btn-purple {
+  background-color: #6f42c1;
+  color: white;
+}
+
+.btn-purple:hover {
+  background-color: #5a32a3;
+}

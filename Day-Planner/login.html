@@ -5,96 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login | ZenDay Planner</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <style>
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .login-container {
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .image-side {
-      background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      flex: 1;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 50, 0.5);
-      z-index: 1;
-    }
-
-    .animated-text {
-      z-index: 2;
-      font-size: 2rem;
-      text-align: center;
-      animation: fadeIn 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0.3; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .form-side {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f8f9fa;
-    }
-
-    .login-form {
-      width: 100%;
-      max-width: 400px;
-      padding: 30px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .login-form h2 {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .btn-purple {
-      background-color: #6f42c1;
-      color: white;
-    }
-
-    .btn-purple:hover {
-      background-color: #5a32a3;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/login_styles.css">
 </head>
 <body>
 
 <div class="login-container">
-  <!-- Left Side Image with Animation -->
   <div class="image-side">
     <div class="image-overlay"></div>
     <div class="animated-text">
       <h1>Plan your day,<br> own your time ⏰</h1>
     </div>
   </div>
-
-  <!-- Right Side Login Form -->
   <div class="form-side">
     <form class="login-form" onsubmit="return handleLogin(event)">
       <h2>Welcome Back!</h2>
@@ -128,7 +49,7 @@
     // Example dummy validation
     if (email === "test@zday.com" && password === "1234") {
       alert("Login successful!");
-      window.location.href = "dashboard.html"; // change this as needed
+      window.location.href = "dashboard.html"; 
     } else {
       alert("Invalid credentials. Try again!");
     }
