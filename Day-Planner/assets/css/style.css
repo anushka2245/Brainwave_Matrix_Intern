@@ -385,7 +385,7 @@ body {
     
     .nav {
         flex-direction: row;
-        display: none; /* Would toggle with mobile menu */
+        display: none; 
     }
     
     .user-profile {
